@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Product preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      @font-face {
+        font-family: "Montserrat";
+        src: url("./font/Montserrat/Montserrat-VariableFont_wght.ttf")
+          format(truetype);
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Fraunces";
+        src: url("./font/Fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf")
+          format(truetype);
+        font-display: swap;
+      }
+      :root {
+        --Dark-cyan: hsl(158, 36%, 37%);
+        --Cream: hsl(30, 38%, 92%);
+
+        --Very-dark-blue: hsl(212, 21%, 14%);
+        --Dark-grayish-blue: hsl(228, 12%, 48%);
+        --White: hsl(0, 0%, 100%);
+      }
+      body {
+        inline-size: 1.5;
+        -webkit-font-smoothing: antialiased;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: hsl(28, 38%, 92%);
+        font-size: 14px;
+      }
+
+      .card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #ffffff;
+        border-radius: 20px;
+        width: 720px;
+
+        .pic {
+          display: flex;
+          align-items: center;
+
+          img {
+            height: 540px;
+            border-radius: 20px 0 0 20px;
+          }
+        }
+
+        .content {
+          display: flex;
+          flex-direction: column;
+          padding: 30px;
+          height: 540px;
+
+          .perfume {
+            overflow-wrap: break-word;
+            font-family: Montserrat;
+            letter-spacing: 7px;
+            color: hsl(228, 12%, 48%);
+            font-weight: 500;
+          }
+
+          .name {
+            overflow-wrap: break-word;
+            inline-size: none;
+            font-family: Fraunces;
+            font-weight: 700;
+            font-size: 40px;
+            margin: 20px 0;
+            line-height: 45px;
+          }
+
+          .goods-content {
+            overflow-wrap: break-word;
+            font-family: Montserrat;
+            font-weight: 500;
+            color: hsl(228, 12%, 48%);
+            font-size: 18px;
+            line-height: 30px;
+            margin: 10px 0;
+          }
+
+          .price {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+
+            .now-price {
+              font-family: Fraunces;
+              color: hsl(158, 36%, 37%);
+              font-weight: 700;
+              font-size: 42px;
+              margin-right: 25px;
+            }
+
+            .sale-price {
+              font-family: Montserrat;
+              text-decoration: line-through;
+              font-weight: 500;
+              font-size: 16px;
+              color: hsl(228, 12%, 48%);
+            }
+          }
+
+          .buy-button {
+            margin: 10px 0;
+
+            .buyBTN {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 300px;
+              height: 50px;
+              font-family: Montserrat;
+              font-weight: 700;
+              color: #ffffff;
+              border-radius: 9px;
+              border: 0;
+              background-color: hsl(158, 36%, 37%);
+              cursor: pointer;
+              font-size: 16px;
+
+              .icon {
+                margin: 10px;
+              }
+            }
+
+            .buyBTN:hover {
+              background-color: hsl(158, 36%, 20%);
+            }
+          }
+        }
+      }
+
+      .attribution {
+        position: absolute;
+        font-size: 11px;
+        text-align: center;
+        bottom: 0;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <article class="card">
+      <figure class="pic">
+        <img src="./images/image-product-desktop.jpg" alt="pic" />
+      </figure>
+
+      <section class="content">
+        <span class="perfume">PERFUME</span>
+
+        <span class="name">Gabrielle Essence Eau De Parfum</span>
+
+        <span class="goods-content">
+          A floral, solar and voluptuous interpretation composed by Olivier
+          Polge, Perfumer-Creator for the House of CHANEL.
+        </span>
+
+        <section class="price">
+          <span class="now-price">$149.99</span>
+          <span class="sale-price">$169.99</span>
+        </section>
+
+        <section class="buy-button">
+          <button class="buyBTN">
+            <figure class="icon">
+              <img src="./images/icon-cart.svg" alt="icon" />
+            </figure>
+            <span class="buy-text">Add to Cart</span>
+          </button>
+        </section>
+      </section>
+    </article>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">WEI HU</a>.
+    </footer>
+  </body>
+</html>
